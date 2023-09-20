@@ -13,7 +13,7 @@ public class Program
             .WithUrl("url",
                 options =>
                 {
-                    options.Cookies.Add(new Cookie("token", "f53c5c19-bf37-463f-8037-f15146329164", "/", "inhouse-test-cmd8.finom.world"));
+                    options.Cookies.Add(new Cookie("token", "f53c5c19-bf37-463f-8037-f15146329164", "/", "domain"));
                 })
             .WithAutomaticReconnect(new RandomRetryPolicy())
             .Build();
