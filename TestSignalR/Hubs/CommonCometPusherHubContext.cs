@@ -2,7 +2,7 @@ namespace TestSignalR.Hubs
 {
     public class CommonCometPusherHubContext : CometPusherHubContext
     {
-        public CommonCometPusherHubContext() : base()
+        public CommonCometPusherHubContext(IUserResolver userResolver) : base(userResolver)
         {
             
         }

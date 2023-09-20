@@ -28,6 +28,8 @@ public class Startup
             // c.SchemaFilter<SwaggerSchemaParametersFilter>();
             c.SchemaGeneratorOptions.SchemaIdSelector = type => $"{type.Namespace}.{type.Name}";
         });
+
+        services.AddTransient<IUserResolver>( _ => new UserResolver());
         
         //services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

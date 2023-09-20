@@ -5,9 +5,11 @@ namespace TestSignalR.Hubs
 {
     public abstract class CometPusherHubContext : HubBase
     {
-        
-        protected CometPusherHubContext()
+        private readonly IUserResolver _userResolver;
+
+        protected CometPusherHubContext(IUserResolver userResolver)
         {
+            _userResolver = userResolver;
         }
 
         public override async Task OnDisconnectedAsync(Exception? exception)
